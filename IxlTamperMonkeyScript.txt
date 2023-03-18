@@ -1,0 +1,21 @@
+// ==UserScript==
+// @name         IxlHideScore
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  Hide score in IXL assignments
+// @author       You
+// @match        https://www.ixl.com/*
+// @grant        none
+// ==/UserScript==
+
+(() => {
+       document.arrive('.practice-stats-container').remove();
+       console.log("Removed stats");
+}
+) ();
+
+(function() {
+    'use strict';
+    document.getElementsByClassName('practice-stats-container')[0].remove();
+    console.log("Removed score card");
+})();
